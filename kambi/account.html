@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMBI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/kambilogo.jpg" alt="" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="products.html" class="navlink" style="color: black;">Winter</a></li>
+                    <li><a href="products.html" class="navlink" style="color: black;">Summer</a></li>
+                    <li><a href="products.html" class="navlink" style="color: black;">New Arrivals</a></li>
+                </ul>
+            </nav>
+            <a href="account.html"><img src="images/loginicon.png" class="loginimg" alt="cart" width="30px" height="30px"></a>
+            <img src="images/menu-icn.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/main.jpeg" alt="">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Sign-up</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn" style="color: black;">login</button>
+                        <a href="">Forgot-password?</a>
+                    </form>
+                    <form id="regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="E-mail">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn" style="color: black;">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>download Our App</h3>
+                <p>Download our aap for Android and ios mobile phone</p>
+                <div class="footer-img">
+                    <img src="images/ww_app-store-badge_150909.png" alt="">
+                    <img src="images/Play-Store-Logo-2.png" alt="">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/kambilogo.jpg" alt="">
+                <p>Our purpose is to give the best quality product to the customer and bring them back and make them happy.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>Coupouns</li>
+                    <li>Blog Posts</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    var menuitems = document.getElementById("menuitems");
+
+    menuitems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(menuitems.style.maxHeight == "0px")
+        {
+            menuitems.style.maxHeight = "200px";
+        }
+        else{
+            menuitems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+<script>
+    var loginform = document.getElementById("loginform")
+    var regform = document.getElementById("regform")
+    var indicator = document.getElementById("indicator")
+
+    function register(){
+        regform.style.transform = "translateX(0px)";
+        loginform.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        regform.style.transform = "translateX(300px)";
+        loginform.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+</script>
+</body>
+</html>
